@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rückmeldungstool</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icon.ico">
+
+        
+    </head>
+
+    <body>
+    <div class="splashscreen" id="splashscreen"><img src="e-exam-logo-rd.png" class="splashscreenbild" id="splashscreenbild">
+    <div class="splashscreenbild_text" id="splashscreenbild_text">Rückmeldungstool</div>
+
+    </div>
+    <h1 style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-size:40px;margin-bottom:40px;margin-top:30px">Rückmeldungstool <img src="e-exam-logo-rd.png"></h1>
+
+    
+    <div class="card">
+    <form form action="javascript:;" onsubmit="abruf_wiki_daten()" style="margin-top:12px">
+    <p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-size:20px; display: inline; ">Datum auswählen:&nbsp;&nbsp;&nbsp;
+        <input type="date" id="start" value="2022-01-01" min="2022-01-01" max="2025-12-31">
+        <button class="button", style="margin-left: 30px">Abfrage starten</button><div id="platzhalter1" style="margin-left:15px;margin-bottom: -10px;"></div></p>
+
+    </form>
+    </div>
+
+    
+    <div class="flex-container">
+    <div class="card2">
+      <p style="font-size: 20px;font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-weight:bold">Prüfungen mit fehlender Rückmeldung </p>
+    <select id="prüfung" multiple><option value=""></option></select> 
+    <p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-size:20px">Rückmeldungsdauer: <select id="tage">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7", selected="selected">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      
+  </select>
+    <button disabled class="button", id="zweiterknopf" onclick="abfrage()" style="margin-left:20px",">Für ausgewählte Prüfungen Erinnerungen versenden</button></p>
+    </div>
+    <div class="card4">
+      <form action=" ">
+        <p style="font-size: 20px;font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-weight:bold; margin-bottom:5px">Logindaten E-Mail</p>
+        <p style="font-size: 20px;font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-weight:normal; margin-bottom:5px"><label for="benutzername">Benutzername:</label></p>
+        <input type="text" id="benutzername123" placeholder="Benutzername"><br><br>
+        <p style="font-size: 20px;font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-weight:normal; margin-bottom:5px; margin-top:-5px"><label for="passwort" class="credentials">Passwort:</label></p>
+        <input type="password" id="passwort" placeholder="Passwort"><br><br>
+      </form>
+      </div>
+  </div>
+
+    <div class="card3">
+    <div class="grid-container">
+        <div class="grid-item" style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-size:20px; font-weight:bold">Ergebnis <div class="grid-item" id="platzhalter"></div></div>
+
+    </div>
+
+    <table id="table">
+      <tr>
+        <th style="width:50%">Prüfung</th>
+        <th style="width:16%">Rückmeldung neu</th>
+        <th style="width:16%">Wiki-Seite aktualisieren</th>
+        <th style="width:16%">Mail senden</th>
+      </tr>
+      <tr>
+      </tr>
+    </table>
+
+    </div>
+
+    </body>
+
+    <script type="text/javascript", src="/eel.js"></script>
+    <script src="index.js"></script>
+    
+</html>
